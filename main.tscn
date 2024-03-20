@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://bahjidm1vi7jc"]
+
+[ext_resource type="PackedScene" uid="uid://dd18bouqjwce5" path="res://player.tscn" id="1_ieakb"]
+[ext_resource type="Script" path="res://main.gd" id="1_qe86d"]
+[ext_resource type="PackedScene" uid="uid://cudeg4hgee8ry" path="res://Medusa.tscn" id="2_pyklm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwjvo"]
+size = Vector2(1144, 133)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_qe86d")
+
+[node name="floor" type="StaticBody2D" parent="."]
+position = Vector2(566, 674)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(7, 1.5)
+shape = SubResource("RectangleShape2D_fwjvo")
+
+[node name="Medusa" parent="." instance=ExtResource("2_pyklm")]
+position = Vector2(575, 315)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_ieakb")]
+position = Vector2(62, 591)
+
+[connection signal="body_entered" from="Medusa" to="." method="_on_medusa_body_entered"]
+[connection signal="body_exited" from="Medusa" to="." method="_on_medusa_body_exited"]
