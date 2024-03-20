@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://baxelvhw80oto"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_mckni"]
+[ext_resource type="PackedScene" uid="uid://cxd6kvkojadc8" path="res://player.tscn" id="1_ulsd0"]
+[ext_resource type="PackedScene" uid="uid://bgv5wpt8cygop" path="res://monster.tscn" id="2_8jhq1"]
+[ext_resource type="Texture2D" uid="uid://co166xx15nga2" path="res://Pixelarium - Playable Character - Free Version/Featured_Image2.png" id="2_vv8kj"]
+[ext_resource type="AudioStream" uid="uid://cx5y0nmd2nksh" path="res://Pixelarium - Playable Character - Free Version/Medieval Vol. 2 4 (Loop).mp3" id="4_j52w3"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_mckni")
+
+[node name="player" parent="." instance=ExtResource("1_ulsd0")]
+position = Vector2(209, 319)
+disable_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(358, 215.5)
+scale = Vector2(1.65333, 1.202)
+texture = ExtResource("2_vv8kj")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+z_index = 1
+polygon = PackedVector2Array(713, 1, 714, 445, 2, 444, 1, -1, 713, 0, 702, -24, -48, -23, -37, 468, 766, 470, 736, -26)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(1, -2)
+polygon = PackedVector2Array(3, 334, 26, 346, 38, 368, 83, 366, 83, 397, 108, 411, 109, 441, 3, 447)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(4, 120, 18, 117, 31, 97, 43, 96, 43, 132, 94, 135, 95, 169, 146, 173, 148, 229, 184, 230, 184, 209, 160, 209, 160, 154, 107, 154, 106, 116, 52, 115, 52, 65, 122, 63, 149, 78, 149, 95, 174, 98, 174, 113, 200, 117, 201, 134, 247, 137, 248, 155, 243, 166, 248, 180, 257, 182, 273, 183, 286, 181, 295, 178, 290, 163, 280, 153, 282, 117, 298, 173, 296, 228, 240, 230, 236, 210, 217, 209, 216, 230, 229, 231, 229, 249, 306, 249, 306, 192, 334, 193, 334, 131, 359, 132, 360, 34, 352, 29, 334, 29, 334, -3, 30, -16, -24, -13)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(133, 257, 158, 258, 161, 245, 134, 226, 107, 242, 105, 260, 115, 258)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(712, 187, 683, 186, 682, 202, 654, 205, 651, 239, 628, 241, 626, 299, 600, 301, 599, 321, 546, 321, 546, 347, 573, 347, 573, 387, 651, 385, 651, 366, 702, 367, 736, 369)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(717, 93, 690, 108, 664, 92, 633, 111, 635, 125, 663, 120, 688, 122, 708, 127, 726, 140)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(583, 185, 560, 196, 554, 214, 566, 213, 582, 215, 601, 215, 613, 219, 613, 206, 599, 193)
+
+[node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(637, 150, 612, 162, 607, 175, 637, 177, 655, 176, 666, 181, 665, 164)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(529, 10, 506, 28, 502, 42, 521, 42, 542, 40, 558, 46, 557, 32, 542, 19)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(398, 108, 380, 119, 369, 130, 370, 142, 388, 141, 406, 140, 417, 140, 425, 140, 423, 126)
+
+[node name="Monster" parent="." instance=ExtResource("2_8jhq1")]
+position = Vector2(450, 171)
+
+[node name="Env" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_j52w3")
+autoplay = true

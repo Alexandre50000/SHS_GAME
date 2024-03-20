@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ci06hjswxfbxg"
+path="res://.godot/imported/Battle-Conflict.mp3-600244ff963bced2a99cef8b538ab6fc.mp3str"
+
+[deps]
+
+source_file="res://Pixelarium - Playable Character - Free Version/Battle-Conflict.mp3"
+dest_files=["res://.godot/imported/Battle-Conflict.mp3-600244ff963bced2a99cef8b538ab6fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

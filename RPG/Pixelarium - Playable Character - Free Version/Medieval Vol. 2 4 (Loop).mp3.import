@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cx5y0nmd2nksh"
+path="res://.godot/imported/Medieval Vol. 2 4 (Loop).mp3-bb956beb651c78a6596e88c297941f80.mp3str"
+
+[deps]
+
+source_file="res://Pixelarium - Playable Character - Free Version/Medieval Vol. 2 4 (Loop).mp3"
+dest_files=["res://.godot/imported/Medieval Vol. 2 4 (Loop).mp3-bb956beb651c78a6596e88c297941f80.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
